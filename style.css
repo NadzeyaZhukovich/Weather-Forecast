@@ -10,6 +10,8 @@ html{
 
 .weather{
     background-image: url(images/bg.png);
+    background-position: center;
+    background-size: cover;
     width: 230px;
     height: 250px;
     border: 1px solid #b2aca4;
@@ -24,13 +26,14 @@ html{
 
 .weather__info{
     margin-top: 20px;
+    margin-bottom: 15px;
 }
 
 .weather__info-temperature{
     border-right: 2px solid;
     margin-right: 10px;
     padding-right: 10px;
-    font-size: 33pt;
+    font-size: 33px;
     float: left;
 }
 
@@ -41,11 +44,37 @@ html{
 .weather__info-city{
     text-transform: capitalize;
     font-weight: 700;
-    font-size: 18pt;
+    font-size: 18px;
 }
 
 .weather__info-date{
     text-transform: capitalize;
-    font-size: 11pt;
+    font-size: 11px;
     font-weight: 300;
+}
+
+.weatherItem{
+    font-size: 14px;
+    width: 230px;
+    height: 37px;
+    border-top: 1px solid #b2aca4;
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+    text-transform: capitalize;
+}
+
+.weatherItem__date{
+    flex-basis: 160px;
+    margin-left: 3px;
+}
+
+.weatherItem__temperature{
+    flex-basis: 28px;
+}
+
+.weatherItem__img{
+    height: 15px;
+    text-align: center;
+    margin-right: 3px;
 }
