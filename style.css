@@ -1,0 +1,51 @@
+html{
+    color: #fff;
+    font-family: Montserrat;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.weather{
+    background-image: url(images/bg.png);
+    width: 230px;
+    height: 250px;
+    border: 1px solid #b2aca4;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 0 auto;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather__info{
+    margin-top: 20px;
+}
+
+.weather__info-temperature{
+    border-right: 2px solid;
+    margin-right: 10px;
+    padding-right: 10px;
+    font-size: 33pt;
+    float: left;
+}
+
+.weather__info-container{
+    float: left;
+}
+
+.weather__info-city{
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 18pt;
+}
+
+.weather__info-date{
+    text-transform: capitalize;
+    font-size: 11pt;
+    font-weight: 300;
+}

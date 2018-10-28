@@ -4,9 +4,21 @@
     <meta charset="utf-8" />
     <title>Weather Forecast</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
 </head>
 <body>
-
+    <div class="weather">
+        <div class="blur"></div>
+        <img class="weather__img" src="images/cloud_large.png">
+        <div class="weather__info">
+            <p class="weather__info-temperature">2&deg;</p>
+            <!-- TODO: fix it -->
+            <div class="weather__info-container">
+                <p class="weather__info-city">warsaw</p>
+                <p class="weather__info-date">jan 02 wednesday</p>
+            </div>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
