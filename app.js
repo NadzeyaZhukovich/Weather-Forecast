@@ -2,14 +2,16 @@ window.onload = () => {
     const $searchBtn = document.getElementById('searchBtn');
     const $searchInput= document.getElementById('cityName');
     const $temperatureUnit = document.getElementById('temperatureUnit');
+    const $weatherCard = document.getElementById('weather');
+    const $weatherCardImg = document.getElementById('weatheCurrentDay__img');
     const $weatheCardCity = document.getElementById('weatheCurrentDay__info-city');
     const $weatheCardTemperature = document.getElementById('weatheCurrentDay__info-temperature');
-
+    const $weatheCardDate = document.getElementById('weatheCurrentDay__info-date');
 
     $searchBtn.addEventListener('click', event => {
         event.preventDefault();
         let city = $searchInput.value;
-        fetchWeather(city);   
+        fetchWeather(city);
     })
 
     function fetchWeather(city) {
@@ -30,8 +32,14 @@ window.onload = () => {
     }
 
     function updateWetherCard(weatherInfo) {
+        const iconCode = weatherInfo.weather[0].icon;
+
         $weatheCardCity.textContent = weatherInfo.name;
         $weatheCardTemperature.innerHTML = `${weatherInfo.main.temp}&deg;`;
+        $weatheCardDate.textContent = Date.today().toString('MMM dd, dddd');
+        $weatherCardImg.src = 'http://openweathermap.org/img/w/' + iconCode +'.png';
+
+        $weatherCard.style.display = 'block';
     }
 }
 
