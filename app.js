@@ -1,4 +1,6 @@
 window.onload = () => {
+    const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather?';
+
     const $searchBtn = document.getElementById('searchBtn');
     const $searchInput= document.getElementById('cityName');
     const $temperatureUnit = document.getElementById('temperatureUnit');
@@ -12,11 +14,12 @@ window.onload = () => {
     $searchBtn.addEventListener('click', event => {
         event.preventDefault();
         let city = $searchInput.value;
-        fetchWeather(city);
+        let units = $temperatureUnit.options[$temperatureUnit.selectedIndex].value;
+        fetchWeather(city, units);
     })
 
-    function fetchWeather(city) {
-        const url = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + ApiKeys.openWeatherMapKey;
+    function fetchWeather(city, units) {
+        const url = BASE_URL + 'q=' + city + '&units=' + units + '&appid=' + ApiKeys.openWeatherMapKey;
         
         fetch(url)
             .then(handleErrors)
@@ -42,12 +45,10 @@ window.onload = () => {
 
         $weatherCard.style.display = 'block';
     }
-    
+
     function showErrorMessage() {
         $errorMessage.textContent = "Something went wrong";
 
         $weatherCard.style.display = 'block';
     }
 }
-
-
