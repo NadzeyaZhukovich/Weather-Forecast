@@ -42,6 +42,7 @@ window.onload = () => {
 
         $weatherCard.style.display = 'block';
     }
+    
     function showErrorMessage() {
         $errorMessage.textContent = "Something went wrong";
 
