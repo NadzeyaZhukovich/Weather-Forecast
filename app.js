@@ -13,18 +13,18 @@ window.onload = () => {
 
     $searchBtn.addEventListener('click', event => {
         event.preventDefault();
-        let city = $searchInput.value;
-        let units = $temperatureUnit.options[$temperatureUnit.selectedIndex].value;
+        const city = $searchInput.value;
+        const units = $temperatureUnit.options[$temperatureUnit.selectedIndex].value;
         fetchWeather(city, units);
     })
 
     function fetchWeather(city, units) {
-        const url = BASE_URL + 'q=' + city + '&units=' + units + '&appid=' + ApiKeys.openWeatherMapKey;
+        const url = `${BASE_URL}q=${city}&units=${units}&appid=${ApiKeys.openWeatherMapKey}`;
         
         fetch(url)
             .then(handleErrors)
             .then(response => response.json())
-            .then(weather => updateWetherCard(weather))
+            .then(weather => updateWeatherCard(weather))
             .catch(error => showErrorMessage());
     }
 
@@ -35,19 +35,19 @@ window.onload = () => {
         return response;
     }
 
-    function updateWetherCard(weatherInfo) {
+    function updateWeatherCard(weatherInfo) {
         const iconCode = weatherInfo.weather[0].icon;
         $errorMessage.textContent = '';
         $weatheCardCity.textContent = weatherInfo.name;
         $weatheCardTemperature.innerHTML = `${weatherInfo.main.temp}&deg;`;
         $weatheCardDate.textContent = Date.today().toString('MMM dd, dddd');
-        $weatherCardImg.src = 'http://openweathermap.org/img/w/' + iconCode +'.png';
+        $weatherCardImg.src = `http://openweathermap.org/img/w/${iconCode}.png`;
 
         $weatherCard.style.display = 'block';
     }
 
     function showErrorMessage() {
-        $errorMessage.textContent = "Something went wrong";
+        $errorMessage.textContent = 'Something went wrong';
 
         $weatherCard.style.display = 'block';
     }
