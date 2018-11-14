@@ -13,15 +13,14 @@ html{
     background-position: center;
     background-size: cover;
     width: 230px;
-    height: 250px;
     border: 1px solid #b2aca4;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    margin: 0 auto;
-    margin-top: 30px;
+    margin: 30px auto 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    display: none;
 }
 
 .weatheCurrentDay{
@@ -29,7 +28,6 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 1px solid #b2aca4;
 }
 
 .weatheCurrentDay__img{
@@ -63,45 +61,4 @@ html{
     text-transform: capitalize;
     font-size: 11px;
     font-weight: 300;
-}
-
-.weatherItem{
-    font-size: 14px;
-    width: 230px;
-    height: 37px;
-    border-top: 1px solid #b2aca4;
-    display: flex; 
-    align-items: center;
-    justify-content: space-around;
-    text-transform: capitalize;
-}
-
-.weatherItem__date{
-    flex-basis: 160px;
-    margin-left: 3px;
-}
-
-.weatherItem__temperature{
-    flex-basis: 28px;
-}
-
-.weatherItem__img{
-    height: 15px;
-    text-align: center;
-    margin-right: 3px;
-}
-
-
-.extendedWeatherInformation{
-    width: 460px;
-    height: 250px;
-    display: flex;
-    background-image: url(images/bg.png);
-    background-position: center;
-    background-size: cover;
-    border: 1px solid #b2aca4;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    margin: 0 auto;
-    margin-top: 30px;
 }
