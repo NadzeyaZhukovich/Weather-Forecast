@@ -1,5 +1,5 @@
 html{
-    color: #fff;
+    color: rgb(126, 126, 126);
     font-family: Montserrat;
 }
 
@@ -9,14 +9,12 @@ html{
 }
 
 .weather{
-    background-image: url(images/bg.png);
-    background-position: center;
-    background-size: cover;
     width: 230px;
     border: 1px solid #b2aca4;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     margin: 30px auto 0 auto;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,39 +24,51 @@ html{
 .weatheCurrentDay{
     width: 230px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.weatheCurrentDay__img{
-    padding-top: 20px;
+    justify-content: center;
 }
 
 .weatheCurrentDay__info{
     margin-top: 20px;
     margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .weatheCurrentDay__info-temperature{
-    border-right: 2px solid;
-    margin-right: 10px;
-    padding-right: 10px;
-    font-size: 33px;
-    float: left;
+    /* margin-right: 10px;
+    padding-right: 10px; */
+    font-size: 40px;
 }
 
 .weatheCurrentDay__info-container{
     float: left;
 }
 
-.weatheCurrentDay__info-city{
+.weatheCurrentData__info-city{
     text-transform: capitalize;
     font-weight: 700;
     font-size: 18px;
 }
 
-.weatheCurrentDay__info-date{
+.weatheCurrentData__info-date{
     text-transform: capitalize;
     font-size: 11px;
     font-weight: 300;
+}
+
+.weatherAdditionalInfo{
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 300;
+}
+
+.style{
+    float: right;
+    margin-left: 10px; 
+}
+
+.additionalInfoStyle{
+    display: flex;
+    align-items: center;
 }
