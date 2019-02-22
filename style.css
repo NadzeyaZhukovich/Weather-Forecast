@@ -8,6 +8,66 @@ html{
     padding: 0;
 }
 
+.searchForm{
+    margin: 20px auto 0;
+    width: 297px;
+
+    overflow: hidden;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.cityName{
+   border-radius: 5px;
+   width: 250px;
+   height: 50px;
+   float: left;
+   padding-left: 15px;
+   border: 1px solid rgb(195, 232, 249);
+}
+
+.temperatureUnit{
+    width: 50px;
+    height: 49px;
+    border: none;
+    opacity: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.searchBtn{
+    width: 50px;
+    height: 51px;
+    border: none;
+    border-top: 1px solid rgb(195, 232, 249);
+    /* border: 1px solid rgb(252, 223, 5); */
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    opacity: 0;
+    transition: all .55s ease;
+}
+
+.searchForm:hover .temperatureUnit, .searchForm:active .temperatureUnit, .searchForm:focus .temperatureUnit{
+    outline: none;
+    opacity: 1;
+    margin-left: -106px;
+}
+
+.searchForm:hover .searchBtn, .searchForm:active .searchBtn, .searchForm:focus .searchBtn{
+    outline: none;
+    opacity: 1;
+    margin-left: -51px;
+}
+
+.searchForm:hover .searchBtn:hover{
+    background: rgb(227, 237, 245);
+}
+
+.temperatureUnit:hover{
+    background-color: rgb(227, 237, 245);
+}
+
+
+
 .weather{
     width: 230px;
     border: 1px solid #b2aca4;
@@ -28,15 +88,14 @@ html{
 }
 
 .weatheCurrentDay__info{
-    margin-top: 20px;
-    margin-bottom: 15px;
+    width: 230px;
+    margin-top: 15px;
+    margin-bottom: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .weatheCurrentDay__info-temperature{
-    /* margin-right: 10px;
-    padding-right: 10px; */
     font-size: 40px;
 }
 
